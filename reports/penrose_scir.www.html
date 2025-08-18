@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+  <style>
+  table, th, td {
+  border: 1px solid #cccccc; border-collapse: collapse; padding-left: 10px; padding-right: 10px; padding-top: 7px; padding-bottom: 7px;
+}
+th {
+  background-color: #E7E9EB; text-align: left; }
+td {
+  word-wrap: break-word; }
+  #prDIV {
+    font-size: 14px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+-apple-;
+  }
+  </style>
+  </head>
+  <body>
+  <div id="prDIV">
+  <h1>penrose OSS-P4/R</h1>
+  <ul>
+  <li><a href="#vuls">Critical and High vulnerabilities</a></li>
+  <li><a href="#mals">Critical and High maliciousCodeRisk</a></li>
+  <li><a href="#engs">Critical and High engineeringRisk</a></li>
+  <li><a href="#auts">Critical and High authorsRisk</a></li>
+  <li><a href="#lics">Critical, High, Medium, and Low licenseRisk</a></li>
+  </ul>
+  <p>
+  <table>
+  <thead><tr><th>OSS Project Report</th><th>Response</th></tr></thead>
+  <tbody><tr><td><div title="OSS Project Overview"><u>Overview</u></div></td><td colspan="100"><hr style="border: 10px solid gray; border-radius: 5px"/> </td></tr><tr><td><div title="Brief description of the component provided by the maintainers and the repository home"><u>Background</u></div></td><td>penrose/penrose, Create beautiful diagrams just by typing notation in plain text.</td></tr><tr><td><div title="Components intended purpose from maintainers"><u>Application or Library</u></div></td><td>Manual (ask)</td></tr><tr><td><div title="When the data and information was last collected for the report"><u>Current as of</u></div></td><td>Date: 08-18-2025 (project queried 6 days ago)</td></tr><tr><td><div title="Summary Scores aggregated to the Project, Product, Protection, and Policy categories"><u>OSS-P4/R Outlook</u></div></td><td><table class='wrapped' data-mce-resize='false'><colgroup><col/></colgroup><tbody>      <tr><td>Overall</td><td style='background-color:rgba(209, 255, 0, 1.0);'>Project (5.9)</td><td style='background-color:rgba(168, 255, 0, 1.0);'>Product (6.7)</td><td style='background-color:rgba(199, 255, 0, 1.0);'>Protection (6.1)</td><td style='background-color:rgba(148, 255, 0, 1.0);'>Policy (7.1)</td></tr><tr><td colspan="100"><hr style='border: 10px solid gray; border-radius: 5px'/></td></tr><tr><td>MY Checks</td><td style='background-color:rgba(0, 255, 0, 1.0);'>Project (10.0)</td><td style='background-color:rgba(255, 255, 255, 1.0);'>Product (NaN)</td><td style='background-color:rgba(255, 255, 255, 1.0);'>Protection (NaN)</td><td style='background-color:rgba(0, 255, 0, 1.0);'>Policy (10.0)</td></tr><tr><td>OSSF Scorecard</td><td style='background-color:rgba(255, 163, 0, 1.0);'>Project (3.2)</td><td style='background-color:rgba(255, 255, 0, 1.0);'>Product (5.0)</td><td style='background-color:rgba(199, 255, 0, 1.0);'>Protection (6.1)</td><td style='background-color:rgba(255, 168, 0, 1.0);'>Policy (3.3)</td></tr><tr><td>MITRE Hipcheck</td><td style='background-color:rgba(255, 224, 0, 1.0);'>Project (4.4)</td><td style='background-color:rgba(87, 255, 0, 1.0);'>Product (8.3)</td><td style='background-color:rgba(255, 255, 255, 1.0);'>Protection (NaN)</td><td style='background-color:rgba(255, 255, 255, 1.0);'>Policy (NaN)</td></tr>  </tbody></table></td></tr><tr><td><div title="Score aggregation aligned with the DoD CIO Memo of January 2022"><u>DOD CIO Criteria</u></div></td><td><table class='wrapped' data-mce-resize='false'><colgroup><col/></colgroup><tbody>      <tr><td>Criteria</td><td style='background-color:rgba(173, 255, 0, 1.0);'>Security (6.6)</td><td style='background-color:rgba(255, 41, 0, 1.0);'>Integrity (0.8)</td><td style='background-color:rgba(204, 255, 0, 1.0);'>Dependencies (6.0)</td><td style='background-color:rgba(0, 255, 0, 1.0);'>Malicious Actors (10.0)</td><td style='background-color:rgba(122, 255, 0, 1.0);'>Long-Term Support (7.6)</td><td style='background-color:rgba(0, 255, 0, 1.0);'>Suitability (10.0)</td></tr><tr><td colspan="100"><hr style='border: 10px solid gray; border-radius: 5px'/></td></tr><tr><td>MY Checks</td><td style='background-color:rgba(255, 255, 255, 1.0);'>Security (NaN)</td><td style='background-color:rgba(255, 255, 255, 1.0);'>Integrity (NaN)</td><td style='background-color:rgba(255, 255, 255, 1.0);'>Dependencies (NaN)</td><td style='background-color:rgba(255, 255, 255, 1.0);'>Malicious Actors (NaN)</td><td style='background-color:rgba(0, 255, 0, 1.0);'>Long-Term Support (10.0)</td><td style='background-color:rgba(0, 255, 0, 1.0);'>Suitability (10.0)</td></tr><tr><td>OSSF Scorecard</td><td style='background-color:rgba(255, 250, 0, 1.0);'>Security (4.9)</td><td style='background-color:rgba(255, 82, 0, 1.0);'>Integrity (1.6)</td><td style='background-color:rgba(204, 255, 0, 1.0);'>Dependencies (6.0)</td><td style='background-color:rgba(255, 255, 255, 1.0);'>Malicious Actors (NaN)</td><td style='background-color:rgba(255, 204, 0, 1.0);'>Long-Term Support (4.0)</td><td style='background-color:rgba(0, 255, 0, 1.0);'>Suitability (10.0)</td></tr><tr><td>MITRE Hipcheck</td><td style='background-color:rgba(87, 255, 0, 1.0);'>Security (8.3)</td><td style='background-color:rgba(255, 0, 0, 1.0);'>Integrity (0.0)</td><td style='background-color:rgba(255, 255, 255, 1.0);'>Dependencies (NaN)</td><td style='background-color:rgba(0, 255, 0, 1.0);'>Malicious Actors (10.0)</td><td style='background-color:rgba(56, 255, 0, 1.0);'>Long-Term Support (8.9)</td><td style='background-color:rgba(255, 255, 255, 1.0);'>Suitability (NaN)</td></tr>  </tbody></table></td></tr><tr><td><div title="Summary Scores aggregated to the stakeholder's criteria"><u>Summarized Scores By CIO Criteria</u></div></td><td>  <table class='wrapped' data-mce-resize='false'><colgroup><col/><col/><col/><col/><col/><col/><col/></colgroup><tbody>      <tr><td>Criteria:<br/></td><td>Security</td><td>Integrity</td><td>Dependencies</td><td>Malicious Actors</td><td>Long-Term Support</td><td>Suitability</td></tr><tr><td>MY Checks:<br/></td><td></td><td></td><td></td><td></td><td>Project Forked(false/false)<br/>Problem Reporting(true/true)<br/>Project Abandoned(false/false)<br/>Dependent Projects Abandoned(0/0)<br/></td><td>Restrictive License(s)(0/0)<br/></td></tr><tr><td><a href='https://github.com/ossf/scorecard/blob/main/docs/checks.md'>OSSF Scorecard</a>:<br/>(higher's better) 4.3/10.0</td><td>Binary Artifacts(10/3.3)<br/><svg width="16" height="16" viewBox="0 -0 100 100"><circle cx="50" cy="50" r="40" fill="red" /><path d="M30 30 L70 70" stroke="white" stroke-width="8" stroke-linecap="round"/><path d="M70 30 L30 70" stroke="white" stroke-width="8" stroke-linecap="round"/></svg>Branch Protection(3/3.3)<br/>Dangerous Workflow(10/3.3)<br/><svg width="16" height="16" viewBox="0 -0 100 100"><circle cx="50" cy="50" r="40" fill="red" /><path d="M30 30 L70 70" stroke="white" stroke-width="8" stroke-linecap="round"/><path d="M70 30 L30 70" stroke="white" stroke-width="8" stroke-linecap="round"/></svg>Token Permissions(0/3.3)<br/><svg width="16" height="16" viewBox="0 -0 100 100"><circle cx="50" cy="50" r="40" fill="red" /><path d="M30 30 L70 70" stroke="white" stroke-width="8" stroke-linecap="round"/><path d="M70 30 L30 70" stroke="white" stroke-width="8" stroke-linecap="round"/></svg>Vulnerabilities(0/3.3)<br/><svg width="16" height="16" viewBox="0 0 100 100"><path d="M50 10 L90 90 H10 Z" fill="yellow" stroke="black" stroke-width="4"/><line x1="50" y1="35" x2="50" y2="60" stroke="black" stroke-width="6" stroke-linecap="round"/><circle cx="50" cy="72" r="4" fill="black"/></svg>Webhooks(NaN/3.3)<br/></td><td><svg width="16" height="16" viewBox="0 -0 100 100"><circle cx="50" cy="50" r="40" fill="red" /><path d="M30 30 L70 70" stroke="white" stroke-width="8" stroke-linecap="round"/><path d="M70 30 L30 70" stroke="white" stroke-width="8" stroke-linecap="round"/></svg>Code Review(1/3.3)<br/>CI Tests(10/3.3)<br/><svg width="16" height="16" viewBox="0 -0 100 100"><circle cx="50" cy="50" r="40" fill="red" /><path d="M30 30 L70 70" stroke="white" stroke-width="8" stroke-linecap="round"/><path d="M70 30 L30 70" stroke="white" stroke-width="8" stroke-linecap="round"/></svg>Fuzzing(0/3.3)<br/><svg width="16" height="16" viewBox="0 -0 100 100"><circle cx="50" cy="50" r="40" fill="red" /><path d="M30 30 L70 70" stroke="white" stroke-width="8" stroke-linecap="round"/><path d="M70 30 L30 70" stroke="white" stroke-width="8" stroke-linecap="round"/></svg>SAST(0/3.3)<br/><svg width="16" height="16" viewBox="0 0 100 100"><path d="M50 10 L90 90 H10 Z" fill="yellow" stroke="black" stroke-width="4"/><line x1="50" y1="35" x2="50" y2="60" stroke="black" stroke-width="6" stroke-linecap="round"/><circle cx="50" cy="72" r="4" fill="black"/></svg>Packaging(NaN/3.3)<br/><svg width="16" height="16" viewBox="0 0 100 100"><path d="M50 10 L90 90 H10 Z" fill="yellow" stroke="black" stroke-width="4"/><line x1="50" y1="35" x2="50" y2="60" stroke="black" stroke-width="6" stroke-linecap="round"/><circle cx="50" cy="72" r="4" fill="black"/></svg>Signed Releases(NaN/3.3)<br/></td><td>Dependency Update Tool(10/3.3)<br/><svg width="16" height="16" viewBox="0 -0 100 100"><circle cx="50" cy="50" r="40" fill="red" /><path d="M30 30 L70 70" stroke="white" stroke-width="8" stroke-linecap="round"/><path d="M70 30 L30 70" stroke="white" stroke-width="8" stroke-linecap="round"/></svg>Pinned Dependencies(0/3.3)<br/></td><td></td><td>Contributors(10/3.3)<br/>Maintained(6/3.3)<br/><svg width="16" height="16" viewBox="0 -0 100 100"><circle cx="50" cy="50" r="40" fill="red" /><path d="M30 30 L70 70" stroke="white" stroke-width="8" stroke-linecap="round"/><path d="M70 30 L30 70" stroke="white" stroke-width="8" stroke-linecap="round"/></svg>CII Best Practices(0/3.3)<br/><svg width="16" height="16" viewBox="0 -0 100 100"><circle cx="50" cy="50" r="40" fill="red" /><path d="M30 30 L70 70" stroke="white" stroke-width="8" stroke-linecap="round"/><path d="M70 30 L30 70" stroke="white" stroke-width="8" stroke-linecap="round"/></svg>Security Policy(0/3.3)<br/></td><td>License(10/3.3)<br/></td></tr><tr><td><a href='https://github.com/mitre/hipcheck/blob/main/docs/book/src/using/analyses.md'>MITRE Hipcheck</a>:<br/>(score &le; threshold) <svg width="16" height="16" viewBox="0 -0 100 100"><circle cx="50" cy="50" r="40" fill="red" /><path d="M30 30 L70 70" stroke="white" stroke-width="8" stroke-linecap="round"/><path d="M70 30 L30 70" stroke="white" stroke-width="8" stroke-linecap="round"/></svg>INVESTIGATE risk rated as 0.55, acceptable below or equal to 0.50</td><td>Binary Artifacts(0.0/0)<br/>Large Commits(0.01/0.02)<br/>Malware Entropy(0.0/0)<br/><svg width="16" height="16" viewBox="0 0 100 100"><path d="M50 10 L90 90 H10 Z" fill="yellow" stroke="black" stroke-width="4"/><line x1="50" y1="35" x2="50" y2="60" stroke="black" stroke-width="6" stroke-linecap="round"/><circle cx="50" cy="72" r="4" fill="black"/></svg>Typosquatting(NaN/true)<br/></td><td><svg width="16" height="16" viewBox="0 -0 100 100"><circle cx="50" cy="50" r="40" fill="red" /><path d="M30 30 L70 70" stroke="white" stroke-width="8" stroke-linecap="round"/><path d="M70 30 L30 70" stroke="white" stroke-width="8" stroke-linecap="round"/></svg>Self Reviews(0.6/0.2)<br/><svg width="16" height="16" viewBox="0 -0 100 100"><circle cx="50" cy="50" r="40" fill="red" /><path d="M30 30 L70 70" stroke="white" stroke-width="8" stroke-linecap="round"/><path d="M70 30 L30 70" stroke="white" stroke-width="8" stroke-linecap="round"/></svg>Fuzz Testing(false/true)<br/><svg width="16" height="16" viewBox="0 -0 100 100"><circle cx="50" cy="50" r="40" fill="red" /><path d="M30 30 L70 70" stroke="white" stroke-width="8" stroke-linecap="round"/><path d="M70 30 L30 70" stroke="white" stroke-width="8" stroke-linecap="round"/></svg>Pull Reviews(0.6/0.05)<br/></td><td></td><td>Author Affiliation(0.0/0)<br/></td><td>Commit Activity(8.0/71)<br/></td><td></td></tr>  </tbody></table></td></tr><tr><td><div title="Information concerning efforts to address security issues"><u>Security</u></div></td><td colspan="100"><hr style="border: 10px solid gray; border-radius: 5px"/> </td></tr><tr><td><div title="Component is available from locations known to be trusted and is a repository for the project or just a mirror"><u>Trusted Source(s)</u></div></td><td>Source: https://github.com/penrose/penrose<br>D-U-N-S Availability: Manual<br>Repo or Mirror: Manual</td></tr><tr><td><div title="Whether the URL is publicly accessible or requires registration"><u>Public or Private</u></div></td><td>Visibility is: public<br>Private is: false</td></tr><tr><td><div title="No controls over reading, or accessing, artifacts"><u>Fully Unrestricted</u></div></td><td>Read-Only: manual<br>Write: manual</td></tr><tr><td><div title="Credentials necessary (e.g., userid/passwd, token, two-factor authentication) for write access."><u>Login Credentials</u></div></td><td>Manual</td></tr><tr><td><div title="Maintainers known to use repository protections"><u>Use of Repository Protections</u></div></td><td><svg width="16" height="16" viewBox="0 -0 100 100"><circle cx="50" cy="50" r="40" fill="red" /><path d="M30 30 L70 70" stroke="white" stroke-width="8" stroke-linecap="round"/><path d="M70 30 L30 70" stroke="white" stroke-width="8" stroke-linecap="round"/></svg>3/10 as branch protection is not maximal on development and all release branches<br>10/10 as no dangerous workflow patterns detected<br><svg width="16" height="16" viewBox="0 -0 100 100"><circle cx="50" cy="50" r="40" fill="red" /><path d="M30 30 L70 70" stroke="white" stroke-width="8" stroke-linecap="round"/><path d="M70 30 L30 70" stroke="white" stroke-width="8" stroke-linecap="round"/></svg>0/10 as detected GitHub workflow tokens with excessive permissions, and<br><svg width="16" height="16" viewBox="0 0 100 100"><path d="M50 10 L90 90 H10 Z" fill="yellow" stroke="black" stroke-width="4"/><line x1="50" y1="35" x2="50" y2="60" stroke="black" stroke-width="6" stroke-linecap="round"/><circle cx="50" cy="72" r="4" fill="black"/></svg> check that webhooks is configured supporting secrets not run</td></tr><tr><td><div title="Commits detected which are larger, on average, for other commits"><u>Large Commits</u></div></td><td>Detected some unusually large commits being 0.01 found under or at the 0.02 permitted threshold (Churn)</td></tr><tr><td><div title="Commits which appear to obfuscate behavior (e.g., base64 encodings, obscure constructs)"><u>Obfuscated Code</u></div></td><td>Detected no unusual-looking commits being 0.0 found under or at the 0 permitted threshold (Entropy)</td></tr><tr><td><div title="Whether the component, or portions thereof, is distributed in binary (i.e., non-source code) form"><u>Binary Artifact(s)</u></div></td><td>10/10 as no binaries found in the repo with binaries potentially containing code being 0 found under or at the 0 permitted threshold</td></tr><tr><td><div title="Commits or code which appear use names varying from other commonly used words (e.g., misspellings)"><u>Typosquatting Risk</u></div></td><td><svg width="16" height="16" viewBox="0 0 100 100"><path d="M50 10 L90 90 H10 Z" fill="yellow" stroke="black" stroke-width="4"/><line x1="50" y1="35" x2="50" y2="60" stroke="black" stroke-width="6" stroke-linecap="round"/><circle cx="50" cy="72" r="4" fill="black"/></svg>Failed to analyze for typos - can't identify a known language</td></tr><tr><td><div title="Components which are known to contain specific vulnerabilities (e.g., CVEs)"><u>Known Vulnerabilities</u></div></td><td><svg width="16" height="16" viewBox="0 -0 100 100"><circle cx="50" cy="50" r="40" fill="red" /><path d="M30 30 L70 70" stroke="white" stroke-width="8" stroke-linecap="round"/><path d="M70 30 L30 70" stroke="white" stroke-width="8" stroke-linecap="round"/></svg>0/10 as 43 existing vulnerabilities detected (open, known unfixed vulnerabilities).<br>Other detected vuls including other dependencies identified potentially: 8 critical; 38 high; 69 medium; 7 low<br>criticals: <svg width="16" height="16" viewBox="0 -0 100 100"><circle cx="50" cy="50" r="40" fill="red" /><path d="M30 30 L70 70" stroke="white" stroke-width="8" stroke-linecap="round"/><path d="M70 30 L30 70" stroke="white" stroke-width="8" stroke-linecap="round"/></svg>2 GHSA-9crc-q9x8-hgqq; 3 GHSA-fjxv-7rqg-78g4; 1 GHSA-j9fq-vwqv-2fm2; 2 GHSA-jf85-cpcp-j695</td></tr><tr><td><div title="Information concerning the integrity of code, scripts, configuration files, and associated documentation"><u>Integrity</u></div></td><td colspan="100"><hr style="border: 10px solid gray; border-radius: 5px"/> </td></tr><tr><td><div title="Code reviews are conducted by others distinct from the contributor"><u>Peer Reviews</u></div></td><td>Count pending; and activity is <svg width="16" height="16" viewBox="0 -0 100 100"><circle cx="50" cy="50" r="40" fill="red" /><path d="M30 30 L70 70" stroke="white" stroke-width="8" stroke-linecap="round"/><path d="M70 30 L30 70" stroke="white" stroke-width="8" stroke-linecap="round"/></svg>1/10 as Found 2/17 approved changesets -- score normalized to 1 with change requests often lacking approving review prior to merge with 58.241% <svg width="16" height="16" viewBox="0 -0 100 100"><circle cx="50" cy="50" r="40" fill="red" /><path d="M30 30 L70 70" stroke="white" stroke-width="8" stroke-linecap="round"/><path d="M70 30 L30 70" stroke="white" stroke-width="8" stroke-linecap="round"/></svg>over the 5.0% threshold and commits too often applied by the author with 62.83% <svg width="16" height="16" viewBox="0 -0 100 100"><circle cx="50" cy="50" r="40" fill="red" /><path d="M30 30 L70 70" stroke="white" stroke-width="8" stroke-linecap="round"/><path d="M70 30 L30 70" stroke="white" stroke-width="8" stroke-linecap="round"/></svg>over the 20.0% threshold</td></tr><tr><td><div title="Maintainers and/or contributors known to use code and/or security scanners"><u>Use of Code and Security Scanners</u></div></td><td><svg width="16" height="16" viewBox="0 -0 100 100"><circle cx="50" cy="50" r="40" fill="red" /><path d="M30 30 L70 70" stroke="white" stroke-width="8" stroke-linecap="round"/><path d="M70 30 L30 70" stroke="white" stroke-width="8" stroke-linecap="round"/></svg>0/10 as project is not fuzzed with repository <svg width="16" height="16" viewBox="0 -0 100 100"><circle cx="50" cy="50" r="40" fill="red" /><path d="M30 30 L70 70" stroke="white" stroke-width="8" stroke-linecap="round"/><path d="M70 30 L30 70" stroke="white" stroke-width="8" stroke-linecap="round"/></svg>not receiving regular fuzz testing<br><svg width="16" height="16" viewBox="0 -0 100 100"><circle cx="50" cy="50" r="40" fill="red" /><path d="M30 30 L70 70" stroke="white" stroke-width="8" stroke-linecap="round"/><path d="M70 30 L30 70" stroke="white" stroke-width="8" stroke-linecap="round"/></svg>0/10 as SAST tool is not run on all commits -- score normalized to 0, and <br>10/10 as 30 out of 30 merged PRs checked by a CI test -- score normalized to 10</td></tr><tr><td><div title="Commits for contributed source code are signed, that is, attribution without cryptographic support (e.g., git commit's signoff) by the contributor"><u>Signed Commits</u></div></td><td>Manual</td></tr><tr><td><div title="Whether commits for contributed source code are signed, that is, attribution with cryptographic support (e.g., git_commit's gpg-sign) by the contributor"><u>Cryptographically Signed Commits</u></div></td><td>100 of the last 100 commits have a valid cryptographic signature.</td></tr><tr><td><div title="Component releases and any associated artifacts that are cryptographically signed (applies to both repositories and mirrors)"><u>Cryptographically Signed Releases &amp; Artifacts</u></div></td><td><svg width="16" height="16" viewBox="0 0 100 100"><path d="M50 10 L90 90 H10 Z" fill="yellow" stroke="black" stroke-width="4"/><line x1="50" y1="35" x2="50" y2="60" stroke="black" stroke-width="6" stroke-linecap="round"/><circle cx="50" cy="72" r="4" fill="black"/></svg>-1/10 as no releases found, and<br><svg width="16" height="16" viewBox="0 0 100 100"><path d="M50 10 L90 90 H10 Z" fill="yellow" stroke="black" stroke-width="4"/><line x1="50" y1="35" x2="50" y2="60" stroke="black" stroke-width="6" stroke-linecap="round"/><circle cx="50" cy="72" r="4" fill="black"/></svg>-1/10 as packaging workflow not detected; investigate if any such signing(s) are crytopgraphic</td></tr><tr><td><div title="Information concerning component and subcomponent dependencies"><u>Dependencies</u></div></td><td colspan="100"><hr style="border: 10px solid gray; border-radius: 5px"/> </td></tr><tr><td><div title="Whether the component publishes a Software Bill of Materials (SBOM)"><u>Published Software Bill of Materials</u></div></td><td>SPDX-2.3,Tool: protobom-v0.0.0-20250805170613-cf5b071169fb+dirty,Tool: GitHub.com-Dependency-Graph<br>Language package managers detected: 2499 npm, 1156 cargo, 1138 github, 549 githubactions, 11 gem, 9 pypi, 1 golang</td></tr><tr><td><div title="For each known dependency, whether the component stipulates specific versions"><u>Dependencies Pinned to Version</u></div></td><td><svg width="16" height="16" viewBox="0 -0 100 100"><circle cx="50" cy="50" r="40" fill="red" /><path d="M30 30 L70 70" stroke="white" stroke-width="8" stroke-linecap="round"/><path d="M70 30 L30 70" stroke="white" stroke-width="8" stroke-linecap="round"/></svg>0/10 as dependency not pinned by hash detected -- score normalized to 0</td></tr><tr><td><div title="Whether the known dependencies specified are up to date"><u>Dependencies Up to Date</u></div></td><td>Yes with update tool detected; investigate if any dependencies apply to more than the pipeline</td></tr><tr><td><div title="Primary (1st level), secondary, teritary, et. al. detected and/or discovered"><u>Number OSS Dependencies</u></div></td><td>Primary: Total found: 2508, dependencies pulled: 2507, dependencies unknown: <svg width="16" height="16" viewBox="0 0 100 100"><path d="M50 10 L90 90 H10 Z" fill="yellow" stroke="black" stroke-width="4"/><line x1="50" y1="35" x2="50" y2="60" stroke="black" stroke-width="6" stroke-linecap="round"/><circle cx="50" cy="72" r="4" fill="black"/></svg>1<br>Secondary: Total found: 2855, dependencies pulled: <svg width="16" height="16" viewBox="0 0 100 100"><path d="M50 10 L90 90 H10 Z" fill="yellow" stroke="black" stroke-width="4"/><line x1="50" y1="35" x2="50" y2="60" stroke="black" stroke-width="6" stroke-linecap="round"/><circle cx="50" cy="72" r="4" fill="black"/></svg>0, dependencies unknown: <svg width="16" height="16" viewBox="0 0 100 100"><path d="M50 10 L90 90 H10 Z" fill="yellow" stroke="black" stroke-width="4"/><line x1="50" y1="35" x2="50" y2="60" stroke="black" stroke-width="6" stroke-linecap="round"/><circle cx="50" cy="72" r="4" fill="black"/></svg>2855<br>Tertiary and greater (Max search depth realized 2): Total found: <svg width="16" height="16" viewBox="0 0 100 100"><path d="M50 10 L90 90 H10 Z" fill="yellow" stroke="black" stroke-width="4"/><line x1="50" y1="35" x2="50" y2="60" stroke="black" stroke-width="6" stroke-linecap="round"/><circle cx="50" cy="72" r="4" fill="black"/></svg>0, dependencies pulled: <svg width="16" height="16" viewBox="0 0 100 100"><path d="M50 10 L90 90 H10 Z" fill="yellow" stroke="black" stroke-width="4"/><line x1="50" y1="35" x2="50" y2="60" stroke="black" stroke-width="6" stroke-linecap="round"/><circle cx="50" cy="72" r="4" fill="black"/></svg>0, dependencies unknown: 0</td></tr><tr><td><div title="Number of dependencies not adhering to an OSS definition (e.g., commercial software)"><u>Number Proprietary Dependencies</u></div></td><td>Primary: Manual<br>Secondary and tertiary: Manual</td></tr><tr><td><div title="Information concerning the trustworthiness of the developers"><u>Malicious Actors</u></div></td><td colspan="100"><hr style="border: 10px solid gray; border-radius: 5px"/> </td></tr><tr><td><div title="If any contributor identifiers are known to have contributed an intentional vulnerability any components"><u>Author(s) Known to Commit Vulnerabilities</u></div></td><td>Manual</td></tr><tr><td><div title="If any contributor identifiers are known to have contributed malicious code to any components, regardless of intent"><u>Author(s) Known to Commit Malicious Code</u></div></td><td>Hipcheck contributors affiliations being 0 found at or under the 0 permitted threshold</td></tr><tr><td><div title="Information concerning adequate supported"><u>Long Term Support</u></div></td><td colspan="100"><hr style="border: 10px solid gray; border-radius: 5px"/> </td></tr><tr><td><div title="Brief description of the component provided by the maintainers and the repository home"><u>Project Summary</u></div></td><td>penrose/penrose, Create beautiful diagrams just by typing notation in plain text.</td></tr><tr><td><div title="Individual or organization who owns the component with available details"><u>Individual or Organization</u></div></td><td>Organization<br>Details: Name: Penrose<br>Company: Not Reported<br>Bio: Create beautiful diagrams just by typing mathematical notation in plain text.<br>Email: team@penrose.ink<br>Blog: https://penrose.cs.cmu.edu/<br>Geo: Carnegie Mellon University<br>Source: GitHub</td></tr><tr><td><div title="For organizations that have an identifying code (e.g., DUNS) as a company and type of company (e.g., 501(c)(3))"><u>Organization Type</u></div></td><td>Pending, see: https://api.github.com/users/penrose/orgs <br>logistics database D-U-N-S code: Manual</td></tr><tr><td><div title="Supply-Chain Level for Software Artifacts (SLSA) reported by the component maintainer(s)"><u>SLSA Level</u></div></td><td>Pending: (ask)</td></tr><tr><td><div title="Identifies if the project is following OSSF's Best Practices guidelines"><u>Best Practices</u></div></td><td><svg width="16" height="16" viewBox="0 -0 100 100"><circle cx="50" cy="50" r="40" fill="red" /><path d="M30 30 L70 70" stroke="white" stroke-width="8" stroke-linecap="round"/><path d="M70 30 L30 70" stroke="white" stroke-width="8" stroke-linecap="round"/></svg>0/10 as no effort to earn an OpenSSF best practices badge detected</td></tr><tr><td><div title="Projects identified, explicitly by way of OSSF Scorecard and/or GitHub's API as being marked as archived"><u>Number of Abandoned Project(s)</u></div></td><td>penrose is not archived; 0 of the primary dependencies are abandoned; <svg width="16" height="16" viewBox="0 0 100 100"><path d="M50 10 L90 90 H10 Z" fill="yellow" stroke="black" stroke-width="4"/><line x1="50" y1="35" x2="50" y2="60" stroke="black" stroke-width="6" stroke-linecap="round"/><circle cx="50" cy="72" r="4" fill="black"/></svg>tertiary (other) dependencies are not checked at this time</td></tr><tr><td><div title="Reports score for actively maintained projects as calculated by OSSF Criticality Project"><u>OSSF's Activity (criticality) Score (work in progress)</u></div></td><td>0.43/1.0 (higher's better)</td></tr><tr><td><div title="Days since the last logged a commit"><u>Commits</u></div></td><td>Days since last commit: 1 days, on Mon Aug 11 16:24:34 UTC 2025, reported 6 days ago<br>Days since first commit: 3246 days, on Thu Sep 22 04:47:19 UTC 2016, reported 6 days ago<br>Activity: 6/10 with 6 commit(s) and 2 issue activity found in the last 90 days -- score normalized to 6 with most recent activity being 8 weeks under or at the 71 week threshold</td></tr><tr><td><div title="Count of maintainers, contributors, and organizations affiliated with the project"><u>Number of Contributors</u></div></td><td>Core: Count pending<br>Other: 37<br>Organizational diversity: 10/10 as project has 7 contributing companies or organizations</td></tr><tr><td><div title="Whether maintainers have a published process for reporting problems"><u>Problem Reporting Process</u></div></td><td>Yes with 182 open issues</td></tr><tr><td><div title="Whether maintainers have a published process for reporting vulnerabilities"><u>Vulnerability Reporting Process</u></div></td><td><svg width="16" height="16" viewBox="0 -0 100 100"><circle cx="50" cy="50" r="40" fill="red" /><path d="M30 30 L70 70" stroke="white" stroke-width="8" stroke-linecap="round"/><path d="M70 30 L30 70" stroke="white" stroke-width="8" stroke-linecap="round"/></svg>0/10 as security policy file not detected</td></tr><tr><td><div title="Information concerning the need for additional consideration for use"><u>Suitability</u></div></td><td colspan="100"><hr style="border: 10px solid gray; border-radius: 5px"/> </td></tr><tr><td><div title="License under which the component is released"><u>License</u></div></td><td>License: MIT License<br>SPDX_ID: MIT</td></tr><tr><td><div title="Those licenses which may be impactful to the consumer, such as copy-left, commercial, or no license."><u>License Risk</u></div></td><td>No restrictive license detected<br>Detected no product or dependent license(s) detected  and no impacts potentially reported from dependencies</td></tr><tr><td><div title="Notes and information helpful to reproduce this report"><u>About this report</u></div></td><td colspan="100"><hr style="border: 10px solid gray; border-radius: 5px"/> </td></tr><tr><td><div title="When this report was last compiled into this form"><u>Created</u></div></td><td>Mon Aug 18 20:56:57 UTC 2025</td></tr><tr><td><div title="Tool version"><u>Version</u></div></td><td>pubRel 250516evie (branch: publicRelease)</td></tr><tr><td><div title="Source material used to comprehend components and their dependencies"><u>Analysis Source</u></div></td><td>Package SBOM: penrose_ghapi_sbom.json, 742799016758a9b3cad4ee084eadfa9a</td></tr><tr><td><div title="Information about any job or compilation to comprehend dependencies"><u>Analysis ID</u></div></td><td>SBOM created on 2025-08-12T18:54:09Z (complete)</td></tr><tr><td><div title="Time used to create last report and sum of historical runtimes"><u>Runtime</u></div></td><td>Approximately 0 minute(s) (this run), for a total of 158 minute(s) over 2 run(s)</td></tr><tr><td><div title="Last command line used to create this version of the report"><u>Command line</u></div></td><td>/home/hc_user/.local/bin/scir-oss.sh -l -v -C penrose -G penrose/penrose -P github:sbom -p</td></tr><tr><td><div title="Dependency depths traversed and depth of scoring depth performed"><u>Dependency and Scoring depth</u></div></td><td>2, 0</td></tr><tr><td><div title="Relevent comments and warning which may be impactful for the report"><u>Comment/Caveats</u></div></td><td>I: config image _OSSFSC=/home/hc_user/.local/bin/scorecard<br> I: config image _MITRHC=/home/hc_user/.local/bin/hc<br> I: config setting _OSSSCIRsettings=/home/hc_user/.local/bin/settings<br> I: config setting _MITRHCconfig=/home/hc_user/.local/bin/settings/hipcheck/config<br> I: config setting _MITRHCscripts=/home/hc_user/.local/bin/settings/hipcheck/scripts<br> I: config setting _OSSSCIRlicenseDB=/home/hc_user/.local/bin/settings/mychecks/licenseDB.json<br> I: config setting _OSSSCIRrepoResolveDB=<br> I: env setting _TERTIARY_BLACKLIST='pkg:npm|^npm:'<br> W: could not determine OSSF/criticality_score version<br> I: CA Certificate Trust Store  ()<br> I: SBOM dependencies in 'github' are declared to include transitive dependencies - issue depth is 0 (change with -i)<br> W: penrose_gh.html over 2(s) days old, consider rebuilding (-f caches)<br> W: penrose_ghapi.json over 2(s) days old, consider rebuilding (-f caches)<br> W: penrose_ghapi_contrib.json over 2(s) days old, consider rebuilding (-f caches)<br> W: penrose_ghapi_commit.json over 2(s) days old, consider rebuilding (-f caches)<br> W: penrose_ghapi_sbom.json over 2(s) days old, consider rebuilding (-f caches)<br> I: Thresholds for OSSF Scorecard scores set at 3.3<br> I: Threshold for OSSF Criticality Score set at 0.2<br> I: Local cache tolerance set to 2 days<br> I: Days active tolerance set to 497 days<br> I: Days for a new project set to 245 days<br> I: Contributors tolerance set to 3 ids<br> W: Some responses may require manual investigation if necessary (look for 'manual')<br></td></tr><tr><td><div title="Specific tool versions used in the generation of this report"><u>Powered by</u></div></td><td><a href='https://github.com/ossf/scorecard'>OSSF/Scorecard v5.2.1</a>, <a href='https://github.com/ossf/criticality_score'>OSSF/Critical Score unknown</a>, <a href='https://github.com/mitre/hipcheck'>MITRE Hipcheck 3.4.0</a>, <a href='https://github.com/anchore/grype'>grype 0.93.0 db v6.0.3 built on 2025-08-12T04:13:42Z </a></td></tr><tr><td><div title="Explaination of symbols and considerations"><u>footnotes</u></div></td><td><b>**Data in this report is from public sources and with some being self-reported (e.g., emails, country of origin, names)**</b>.<br> <b>Pending/manual</b>: <i>Check requires manual intervention</i>.<br> <b>Restrictive license</b>: <i>A license that requires code changes be openly published (i.e., copyleft)</i>.<br> <svg width="16" height="16" viewBox="0 0 100 100"><path d="M50 10 L90 90 H10 Z" fill="yellow" stroke="black" stroke-width="4"/><line x1="50" y1="35" x2="50" y2="60" stroke="black" stroke-width="6" stroke-linecap="round"/><circle cx="50" cy="72" r="4" fill="black"/></svg><b>-1/n</b>: <i>Score could not be valued due to source data</i>.<br> <svg width="16" height="16" viewBox="0 0 100 100"><path d="M50 10 L90 90 H10 Z" fill="yellow" stroke="black" stroke-width="4"/><line x1="50" y1="35" x2="50" y2="60" stroke="black" stroke-width="6" stroke-linecap="round"/><circle cx="50" cy="72" r="4" fill="black"/></svg><b>NaN</b>: <i>Score could not be computed due to source data</i>.<br> <svg width="16" height="16" viewBox="0 0 100 100"><path d="M50 10 L90 90 H10 Z" fill="yellow" stroke="black" stroke-width="4"/><line x1="50" y1="35" x2="50" y2="60" stroke="black" stroke-width="6" stroke-linecap="round"/><circle cx="50" cy="72" r="4" fill="black"/></svg><b>n</b>: <i>Score indicated a possible risk which requires investigation</i>.<br> <svg width="16" height="16" viewBox="0 0 100 100"><path d="M50 10 L90 90 H10 Z" fill="yellow" stroke="black" stroke-width="4"/><line x1="50" y1="35" x2="50" y2="60" stroke="black" stroke-width="6" stroke-linecap="round"/><circle cx="50" cy="72" r="4" fill="black"/></svg><b> not checked</b>: <i>Check is coming soon</i>.<br> <svg width="16" height="16" viewBox="0 -0 100 100"><circle cx="50" cy="50" r="40" fill="red" /><path d="M30 30 L70 70" stroke="white" stroke-width="8" stroke-linecap="round"/><path d="M70 30 L30 70" stroke="white" stroke-width="8" stroke-linecap="round"/></svg><b>m/n</b>: <i>Score did not meet goals and/or thresholds</i>.<br> <svg width="16" height="16" viewBox="0 -0 100 100"><circle cx="50" cy="50" r="40" fill="red" /><path d="M30 30 L70 70" stroke="white" stroke-width="8" stroke-linecap="round"/><path d="M70 30 L30 70" stroke="white" stroke-width="8" stroke-linecap="round"/></svg><b>n</b>: <i>Score did not meet goals and/or thresholds</i>.<br> <svg width="16" height="16" viewBox="0 -0 100 100"><circle cx="50" cy="50" r="40" fill="red" /><path d="M30 30 L70 70" stroke="white" stroke-width="8" stroke-linecap="round"/><path d="M70 30 L30 70" stroke="white" stroke-width="8" stroke-linecap="round"/></svg><b>Yes/No</b>: <i>Score did not meet goals and/or thresholds</i>.<br> <svg width="16" height="16" viewBox="0 -0 100 100"><circle cx="50" cy="50" r="40" fill="red" /><path d="M30 30 L70 70" stroke="white" stroke-width="8" stroke-linecap="round"/><path d="M70 30 L30 70" stroke="white" stroke-width="8" stroke-linecap="round"/></svg><b>true/false</b>: <i>Score did not meet goals and/or thresholds</i>.<br></td></tr></tbody></table>
+<h2 id="vuls">Critical and High vulnerabilities</h2><table><tr><th>Package</th><th>Impact</th><th>Description</th></tr>
+<tr><td>pkg:npm/vitest@%5E0.31 version &lt;=0.0.125 (unknown)</td><td>CV-GHSA-9crc-q9x8-hgqq</td><td><h4>Overview</h4>
+
+Vitest allows Remote Code Execution when accessing a malicious website while Vitest API server is listening<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-9crc-q9x8-hgqq
+
+<h4>Recommendation</h4>
+
+Fix available in None Provided
+
+<h4>References</h4>
+
+https://github.com/vitest-dev/vitest/blob/9a581e1c43e5c02b11e2a8026a55ce6a8cb35114/packages/vitest/src/api/setup.ts#L32-L46<br/>https://github.com/vitest-dev/vitest/blob/9a581e1c43e5c02b11e2a8026a55ce6a8cb35114/packages/vitest/src/api/setup.ts#L66-L76<br/>https://github.com/vitest-dev/vitest/security/advisories/GHSA-9crc-q9x8-hgqq<br/>https://vitest.dev/config/#api
+
+<h4>CVE:</h4> CVE-2025-24964 - <b>CVSS</b>: 9.6
+</td></tr>
+<tr><td>pkg:npm/vitest@%5E0.31.1 version &lt;=0.0.125 (unknown)</td><td>CV-GHSA-9crc-q9x8-hgqq</td><td><h4>Overview</h4>
+
+Vitest allows Remote Code Execution when accessing a malicious website while Vitest API server is listening<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-9crc-q9x8-hgqq
+
+<h4>Recommendation</h4>
+
+Fix available in None Provided
+
+<h4>References</h4>
+
+https://github.com/vitest-dev/vitest/blob/9a581e1c43e5c02b11e2a8026a55ce6a8cb35114/packages/vitest/src/api/setup.ts#L32-L46<br/>https://github.com/vitest-dev/vitest/blob/9a581e1c43e5c02b11e2a8026a55ce6a8cb35114/packages/vitest/src/api/setup.ts#L66-L76<br/>https://github.com/vitest-dev/vitest/security/advisories/GHSA-9crc-q9x8-hgqq<br/>https://vitest.dev/config/#api
+
+<h4>CVE:</h4> CVE-2025-24964 - <b>CVSS</b>: 9.6
+</td></tr>
+<tr><td>pkg:npm/form-data@2.3.3 version &lt;2.5.4 (unknown)</td><td>CV-GHSA-fjxv-7rqg-78g4</td><td><h4>Overview</h4>
+
+form-data uses unsafe random function in form-data for choosing boundary<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-fjxv-7rqg-78g4
+
+<h4>Recommendation</h4>
+
+Fix available in 2.5.4
+
+<h4>References</h4>
+
+https://github.com/form-data/form-data/commit/3d1723080e6577a66f17f163ecd345a21d8d0fd0<br/>https://github.com/form-data/form-data/security/advisories/GHSA-fjxv-7rqg-78g4<br/>https://github.com/form-data/form-data/security/advisories/GHSA-fjxv-7rqg-78g4
+
+<h4>CVE:</h4> CVE-2025-7783 - <b>CVSS</b>: null
+</td></tr>
+<tr><td>pkg:npm/form-data@2.5.1 version &lt;2.5.4 (unknown)</td><td>CV-GHSA-fjxv-7rqg-78g4</td><td><h4>Overview</h4>
+
+form-data uses unsafe random function in form-data for choosing boundary<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-fjxv-7rqg-78g4
+
+<h4>Recommendation</h4>
+
+Fix available in 2.5.4
+
+<h4>References</h4>
+
+https://github.com/form-data/form-data/commit/3d1723080e6577a66f17f163ecd345a21d8d0fd0<br/>https://github.com/form-data/form-data/security/advisories/GHSA-fjxv-7rqg-78g4<br/>https://github.com/form-data/form-data/security/advisories/GHSA-fjxv-7rqg-78g4
+
+<h4>CVE:</h4> CVE-2025-7783 - <b>CVSS</b>: null
+</td></tr>
+<tr><td>pkg:npm/form-data@4.0.0 version &gt;=4.0.0,&lt;4.0.4 (unknown)</td><td>CV-GHSA-fjxv-7rqg-78g4</td><td><h4>Overview</h4>
+
+form-data uses unsafe random function in form-data for choosing boundary<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-fjxv-7rqg-78g4
+
+<h4>Recommendation</h4>
+
+Fix available in 4.0.4
+
+<h4>References</h4>
+
+https://github.com/form-data/form-data/commit/3d1723080e6577a66f17f163ecd345a21d8d0fd0<br/>https://github.com/form-data/form-data/security/advisories/GHSA-fjxv-7rqg-78g4<br/>https://github.com/form-data/form-data/security/advisories/GHSA-fjxv-7rqg-78g4
+
+<h4>CVE:</h4> CVE-2025-7783 - <b>CVSS</b>: null
+</td></tr>
+<tr><td>pkg:npm/parse-url@6.0.2 version &lt;8.1.0 (unknown)</td><td>CV-GHSA-j9fq-vwqv-2fm2</td><td><h4>Overview</h4>
+
+Server-Side Request Forgery (SSRF) in GitHub repository ionicabizau/parse-url<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-j9fq-vwqv-2fm2
+
+<h4>Recommendation</h4>
+
+Fix available in 8.1.0
+
+<h4>References</h4>
+
+https://github.com/ionicabizau/parse-url/commit/b88c81df8f4c5168af454eaa4f92afa9349e4e13<br/>https://huntr.dev/bounties/1b4c972a-abc8-41eb-a2e1-696db746b5fd<br/>https://github.com/ionicabizau/parse-url/commit/b88c81df8f4c5168af454eaa4f92afa9349e4e13<br/>https://huntr.dev/bounties/1b4c972a-abc8-41eb-a2e1-696db746b5fd
+
+<h4>CVE:</h4> CVE-2022-2900 - <b>CVSS</b>: 9.1
+</td></tr>
+<tr><td>pkg:npm/lodash@%5E4.17.15 version &lt;4.17.12 (unknown)</td><td>CV-GHSA-jf85-cpcp-j695</td><td><h4>Overview</h4>
+
+Prototype Pollution in lodash<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-jf85-cpcp-j695
+
+<h4>Recommendation</h4>
+
+Fix available in 4.17.12
+
+<h4>References</h4>
+
+https://access.redhat.com/errata/RHSA-2019:3024<br/>https://security.netapp.com/advisory/ntap-20191004-0005/<br/>https://snyk.io/vuln/SNYK-JS-LODASH-450202<br/>https://support.f5.com/csp/article/K47105354?utm_source=f5support&amp;amp%3Butm_medium=RSS<br/>https://www.oracle.com/security-alerts/cpujan2021.html<br/>https://www.oracle.com/security-alerts/cpuoct2020.html<br/>https://access.redhat.com/errata/RHSA-2019:3024<br/>https://security.netapp.com/advisory/ntap-20191004-0005/<br/>https://snyk.io/vuln/SNYK-JS-LODASH-450202<br/>https://support.f5.com/csp/article/K47105354?utm_source=f5support&amp;amp%3Butm_medium=RSS<br/>https://www.oracle.com/security-alerts/cpujan2021.html<br/>https://www.oracle.com/security-alerts/cpuoct2020.html
+
+<h4>CVE:</h4> CVE-2019-10744 - <b>CVSS</b>: 9.1
+</td></tr>
+<tr><td>pkg:npm/lodash@%5E4.17.21 version &lt;4.17.12 (unknown)</td><td>CV-GHSA-jf85-cpcp-j695</td><td><h4>Overview</h4>
+
+Prototype Pollution in lodash<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-jf85-cpcp-j695
+
+<h4>Recommendation</h4>
+
+Fix available in 4.17.12
+
+<h4>References</h4>
+
+https://access.redhat.com/errata/RHSA-2019:3024<br/>https://security.netapp.com/advisory/ntap-20191004-0005/<br/>https://snyk.io/vuln/SNYK-JS-LODASH-450202<br/>https://support.f5.com/csp/article/K47105354?utm_source=f5support&amp;amp%3Butm_medium=RSS<br/>https://www.oracle.com/security-alerts/cpujan2021.html<br/>https://www.oracle.com/security-alerts/cpuoct2020.html<br/>https://access.redhat.com/errata/RHSA-2019:3024<br/>https://security.netapp.com/advisory/ntap-20191004-0005/<br/>https://snyk.io/vuln/SNYK-JS-LODASH-450202<br/>https://support.f5.com/csp/article/K47105354?utm_source=f5support&amp;amp%3Butm_medium=RSS<br/>https://www.oracle.com/security-alerts/cpujan2021.html<br/>https://www.oracle.com/security-alerts/cpuoct2020.html
+
+<h4>CVE:</h4> CVE-2019-10744 - <b>CVSS</b>: 9.1
+</td></tr>
+<tr><td>pkg:npm/ip@1.1.5 version &lt;=2.0.1 (unknown)</td><td>HV-GHSA-2p57-rm9w-gvfp</td><td><h4>Overview</h4>
+
+ip SSRF improper categorization in isPublic<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-2p57-rm9w-gvfp
+
+<h4>Recommendation</h4>
+
+Fix available in None Provided
+
+<h4>References</h4>
+
+https://github.com/indutny/node-ip/issues/150<br/>https://github.com/indutny/node-ip/pull/143<br/>https://github.com/indutny/node-ip/pull/144<br/>https://github.com/indutny/node-ip/issues/150<br/>https://github.com/indutny/node-ip/pull/143<br/>https://github.com/indutny/node-ip/pull/144<br/>https://security.netapp.com/advisory/ntap-20250117-0010/
+
+<h4>CVE:</h4> CVE-2024-29415 - <b>CVSS</b>: 8.1
+</td></tr>
+<tr><td>pkg:npm/vite@%5E4 version &lt;2.9.16 (unknown)</td><td>HV-GHSA-353f-5xf4-qw67</td><td><h4>Overview</h4>
+
+Vite Server Options (server.fs.deny) can be bypassed using double forward-slash (//)<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-353f-5xf4-qw67
+
+<h4>Recommendation</h4>
+
+Fix available in 2.9.16
+
+<h4>References</h4>
+
+https://github.com/vitejs/vite/commit/813ddd6155c3d54801e264ba832d8347f6f66b32<br/>https://github.com/vitejs/vite/pull/13348<br/>https://github.com/vitejs/vite/security/advisories/GHSA-353f-5xf4-qw67<br/>https://github.com/vitejs/vite/commit/813ddd6155c3d54801e264ba832d8347f6f66b32<br/>https://github.com/vitejs/vite/pull/13348<br/>https://github.com/vitejs/vite/security/advisories/GHSA-353f-5xf4-qw67
+
+<h4>CVE:</h4> CVE-2023-34092 - <b>CVSS</b>: 7.5
+</td></tr>
+<tr><td>pkg:npm/vite@%5E4.0.4 version &lt;2.9.16 (unknown)</td><td>HV-GHSA-353f-5xf4-qw67</td><td><h4>Overview</h4>
+
+Vite Server Options (server.fs.deny) can be bypassed using double forward-slash (//)<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-353f-5xf4-qw67
+
+<h4>Recommendation</h4>
+
+Fix available in 2.9.16
+
+<h4>References</h4>
+
+https://github.com/vitejs/vite/commit/813ddd6155c3d54801e264ba832d8347f6f66b32<br/>https://github.com/vitejs/vite/pull/13348<br/>https://github.com/vitejs/vite/security/advisories/GHSA-353f-5xf4-qw67<br/>https://github.com/vitejs/vite/commit/813ddd6155c3d54801e264ba832d8347f6f66b32<br/>https://github.com/vitejs/vite/pull/13348<br/>https://github.com/vitejs/vite/security/advisories/GHSA-353f-5xf4-qw67
+
+<h4>CVE:</h4> CVE-2023-34092 - <b>CVSS</b>: 7.5
+</td></tr>
+<tr><td>pkg:npm/vite@%5E5.2.1 version &lt;2.9.16 (unknown)</td><td>HV-GHSA-353f-5xf4-qw67</td><td><h4>Overview</h4>
+
+Vite Server Options (server.fs.deny) can be bypassed using double forward-slash (//)<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-353f-5xf4-qw67
+
+<h4>Recommendation</h4>
+
+Fix available in 2.9.16
+
+<h4>References</h4>
+
+https://github.com/vitejs/vite/commit/813ddd6155c3d54801e264ba832d8347f6f66b32<br/>https://github.com/vitejs/vite/pull/13348<br/>https://github.com/vitejs/vite/security/advisories/GHSA-353f-5xf4-qw67<br/>https://github.com/vitejs/vite/commit/813ddd6155c3d54801e264ba832d8347f6f66b32<br/>https://github.com/vitejs/vite/pull/13348<br/>https://github.com/vitejs/vite/security/advisories/GHSA-353f-5xf4-qw67
+
+<h4>CVE:</h4> CVE-2023-34092 - <b>CVSS</b>: 7.5
+</td></tr>
+<tr><td>pkg:npm/lodash.template@4.5.0 version &lt;=4.5.0 (unknown)</td><td>HV-GHSA-35jh-r3h4-6jhm</td><td><h4>Overview</h4>
+
+Command Injection in lodash<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-35jh-r3h4-6jhm
+
+<h4>Recommendation</h4>
+
+Fix available in None Provided
+
+<h4>References</h4>
+
+https://cert-portal.siemens.com/productcert/pdf/ssa-637483.pdf<br/>https://github.com/lodash/lodash/blob/ddfd9b11a0126db2302cb70ec9973b66baec0975/lodash.js%23L14851<br/>https://security.netapp.com/advisory/ntap-20210312-0006/<br/>https://snyk.io/vuln/SNYK-JAVA-ORGFUJIONWEBJARS-1074932<br/>https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARS-1074930<br/>https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWER-1074928<br/>https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWERGITHUBLODASH-1074931<br/>https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-1074929<br/>https://snyk.io/vuln/SNYK-JS-LODASH-1040724<br/>https://www.oracle.com//security-alerts/cpujul2021.html<br/>https://www.oracle.com/security-alerts/cpujan2022.html<br/>https://www.oracle.com/security-alerts/cpujul2022.html<br/>https://www.oracle.com/security-alerts/cpuoct2021.html<br/>https://cert-portal.siemens.com/productcert/pdf/ssa-637483.pdf<br/>https://github.com/lodash/lodash/blob/ddfd9b11a0126db2302cb70ec9973b66baec0975/lodash.js%23L14851<br/>https://security.netapp.com/advisory/ntap-20210312-0006/<br/>https://snyk.io/vuln/SNYK-JAVA-ORGFUJIONWEBJARS-1074932<br/>https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARS-1074930<br/>https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWER-1074928<br/>https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWERGITHUBLODASH-1074931<br/>https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-1074929<br/>https://snyk.io/vuln/SNYK-JS-LODASH-1040724<br/>https://www.oracle.com//security-alerts/cpujul2021.html<br/>https://www.oracle.com/security-alerts/cpujan2022.html<br/>https://www.oracle.com/security-alerts/cpujul2022.html<br/>https://www.oracle.com/security-alerts/cpuoct2021.html
+
+<h4>CVE:</h4> CVE-2021-23337 - <b>CVSS</b>: 7.2
+</td></tr>
+<tr><td>pkg:npm/lodash@%5E4.17.15 version &lt;4.17.21 (unknown)</td><td>HV-GHSA-35jh-r3h4-6jhm</td><td><h4>Overview</h4>
+
+Command Injection in lodash<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-35jh-r3h4-6jhm
+
+<h4>Recommendation</h4>
+
+Fix available in 4.17.21
+
+<h4>References</h4>
+
+https://cert-portal.siemens.com/productcert/pdf/ssa-637483.pdf<br/>https://github.com/lodash/lodash/blob/ddfd9b11a0126db2302cb70ec9973b66baec0975/lodash.js%23L14851<br/>https://security.netapp.com/advisory/ntap-20210312-0006/<br/>https://snyk.io/vuln/SNYK-JAVA-ORGFUJIONWEBJARS-1074932<br/>https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARS-1074930<br/>https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWER-1074928<br/>https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWERGITHUBLODASH-1074931<br/>https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-1074929<br/>https://snyk.io/vuln/SNYK-JS-LODASH-1040724<br/>https://www.oracle.com//security-alerts/cpujul2021.html<br/>https://www.oracle.com/security-alerts/cpujan2022.html<br/>https://www.oracle.com/security-alerts/cpujul2022.html<br/>https://www.oracle.com/security-alerts/cpuoct2021.html<br/>https://cert-portal.siemens.com/productcert/pdf/ssa-637483.pdf<br/>https://github.com/lodash/lodash/blob/ddfd9b11a0126db2302cb70ec9973b66baec0975/lodash.js%23L14851<br/>https://security.netapp.com/advisory/ntap-20210312-0006/<br/>https://snyk.io/vuln/SNYK-JAVA-ORGFUJIONWEBJARS-1074932<br/>https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARS-1074930<br/>https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWER-1074928<br/>https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWERGITHUBLODASH-1074931<br/>https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-1074929<br/>https://snyk.io/vuln/SNYK-JS-LODASH-1040724<br/>https://www.oracle.com//security-alerts/cpujul2021.html<br/>https://www.oracle.com/security-alerts/cpujan2022.html<br/>https://www.oracle.com/security-alerts/cpujul2022.html<br/>https://www.oracle.com/security-alerts/cpuoct2021.html
+
+<h4>CVE:</h4> CVE-2021-23337 - <b>CVSS</b>: 7.2
+</td></tr>
+<tr><td>pkg:npm/lodash@%5E4.17.21 version &lt;4.17.21 (unknown)</td><td>HV-GHSA-35jh-r3h4-6jhm</td><td><h4>Overview</h4>
+
+Command Injection in lodash<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-35jh-r3h4-6jhm
+
+<h4>Recommendation</h4>
+
+Fix available in 4.17.21
+
+<h4>References</h4>
+
+https://cert-portal.siemens.com/productcert/pdf/ssa-637483.pdf<br/>https://github.com/lodash/lodash/blob/ddfd9b11a0126db2302cb70ec9973b66baec0975/lodash.js%23L14851<br/>https://security.netapp.com/advisory/ntap-20210312-0006/<br/>https://snyk.io/vuln/SNYK-JAVA-ORGFUJIONWEBJARS-1074932<br/>https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARS-1074930<br/>https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWER-1074928<br/>https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWERGITHUBLODASH-1074931<br/>https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-1074929<br/>https://snyk.io/vuln/SNYK-JS-LODASH-1040724<br/>https://www.oracle.com//security-alerts/cpujul2021.html<br/>https://www.oracle.com/security-alerts/cpujan2022.html<br/>https://www.oracle.com/security-alerts/cpujul2022.html<br/>https://www.oracle.com/security-alerts/cpuoct2021.html<br/>https://cert-portal.siemens.com/productcert/pdf/ssa-637483.pdf<br/>https://github.com/lodash/lodash/blob/ddfd9b11a0126db2302cb70ec9973b66baec0975/lodash.js%23L14851<br/>https://security.netapp.com/advisory/ntap-20210312-0006/<br/>https://snyk.io/vuln/SNYK-JAVA-ORGFUJIONWEBJARS-1074932<br/>https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARS-1074930<br/>https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWER-1074928<br/>https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSBOWERGITHUBLODASH-1074931<br/>https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-1074929<br/>https://snyk.io/vuln/SNYK-JS-LODASH-1040724<br/>https://www.oracle.com//security-alerts/cpujul2021.html<br/>https://www.oracle.com/security-alerts/cpujan2022.html<br/>https://www.oracle.com/security-alerts/cpujul2022.html<br/>https://www.oracle.com/security-alerts/cpuoct2021.html
+
+<h4>CVE:</h4> CVE-2021-23337 - <b>CVSS</b>: 7.2
+</td></tr>
+<tr><td>pkg:npm/parse-path@4.0.4 version &lt;5.0.0 (unknown)</td><td>HV-GHSA-3j8f-xvm3-ffx4</td><td><h4>Overview</h4>
+
+Authorization Bypass in parse-path<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-3j8f-xvm3-ffx4
+
+<h4>Recommendation</h4>
+
+Fix available in 5.0.0
+
+<h4>References</h4>
+
+https://github.com/ionicabizau/parse-path/commit/f9ad8856a3c8ae18e1cf4caef5edbabbc42840e8<br/>https://huntr.dev/bounties/afffb2bd-fb06-4144-829e-ecbbcbc85388<br/>https://github.com/ionicabizau/parse-path/commit/f9ad8856a3c8ae18e1cf4caef5edbabbc42840e8<br/>https://huntr.dev/bounties/afffb2bd-fb06-4144-829e-ecbbcbc85388
+
+<h4>CVE:</h4> CVE-2022-0624 - <b>CVSS</b>: 7.3
+</td></tr>
+<tr><td>pkg:npm/solid-js@%5E1 version &lt;1.9.4 (unknown)</td><td>HV-GHSA-3qxh-p7jc-5xh6</td><td><h4>Overview</h4>
+
+Solid Lacks Escaping of HTML in JSX Fragments allows for Cross-Site Scripting (XSS)<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-3qxh-p7jc-5xh6
+
+<h4>Recommendation</h4>
+
+Fix available in 1.9.4
+
+<h4>References</h4>
+
+https://github.com/solidjs/solid/commit/b93956f28ed75469af6976a98728e313d0edd236<br/>https://github.com/solidjs/solid/security/advisories/GHSA-3qxh-p7jc-5xh6<br/>https://github.com/solidjs/solid/security/advisories/GHSA-3qxh-p7jc-5xh6
+
+<h4>CVE:</h4> CVE-2025-27109 - <b>CVSS</b>: 7.3
+</td></tr>
+<tr><td>pkg:npm/solid-js@1.7.5 version &lt;1.9.4 (unknown)</td><td>HV-GHSA-3qxh-p7jc-5xh6</td><td><h4>Overview</h4>
+
+Solid Lacks Escaping of HTML in JSX Fragments allows for Cross-Site Scripting (XSS)<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-3qxh-p7jc-5xh6
+
+<h4>Recommendation</h4>
+
+Fix available in 1.9.4
+
+<h4>References</h4>
+
+https://github.com/solidjs/solid/commit/b93956f28ed75469af6976a98728e313d0edd236<br/>https://github.com/solidjs/solid/security/advisories/GHSA-3qxh-p7jc-5xh6<br/>https://github.com/solidjs/solid/security/advisories/GHSA-3qxh-p7jc-5xh6
+
+<h4>CVE:</h4> CVE-2025-27109 - <b>CVSS</b>: 7.3
+</td></tr>
+<tr><td>pkg:npm/cross-spawn@6.0.5 version &lt;6.0.6 (unknown)</td><td>HV-GHSA-3xgq-45jj-v275</td><td><h4>Overview</h4>
+
+Regular Expression Denial of Service (ReDoS) in cross-spawn<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-3xgq-45jj-v275
+
+<h4>Recommendation</h4>
+
+Fix available in 6.0.6
+
+<h4>References</h4>
+
+https://github.com/moxystudio/node-cross-spawn/commit/5ff3a07d9add449021d806e45c4168203aa833ff<br/>https://github.com/moxystudio/node-cross-spawn/commit/640d391fde65388548601d95abedccc12943374f<br/>https://github.com/moxystudio/node-cross-spawn/pull/160<br/>https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-8366349<br/>https://security.snyk.io/vuln/SNYK-JS-CROSSSPAWN-8303230
+
+<h4>CVE:</h4> CVE-2024-21538 - <b>CVSS</b>: 7.5
+</td></tr>
+<tr><td>pkg:npm/cross-spawn@7.0.3 version &gt;=7.0.0,&lt;7.0.5 (unknown)</td><td>HV-GHSA-3xgq-45jj-v275</td><td><h4>Overview</h4>
+
+Regular Expression Denial of Service (ReDoS) in cross-spawn<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-3xgq-45jj-v275
+
+<h4>Recommendation</h4>
+
+Fix available in 7.0.5
+
+<h4>References</h4>
+
+https://github.com/moxystudio/node-cross-spawn/commit/5ff3a07d9add449021d806e45c4168203aa833ff<br/>https://github.com/moxystudio/node-cross-spawn/commit/640d391fde65388548601d95abedccc12943374f<br/>https://github.com/moxystudio/node-cross-spawn/pull/160<br/>https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-8366349<br/>https://security.snyk.io/vuln/SNYK-JS-CROSSSPAWN-8303230
+
+<h4>CVE:</h4> CVE-2024-21538 - <b>CVSS</b>: 7.5
+</td></tr>
+<tr><td>pkg:npm/lodash@%5E4.17.15 version &lt;4.17.11 (unknown)</td><td>HV-GHSA-4xc9-xhrj-v574</td><td><h4>Overview</h4>
+
+Prototype Pollution in lodash<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-4xc9-xhrj-v574
+
+<h4>Recommendation</h4>
+
+Fix available in 4.17.11
+
+<h4>References</h4>
+
+https://hackerone.com/reports/380873<br/>https://security.netapp.com/advisory/ntap-20190919-0004/<br/>https://hackerone.com/reports/380873<br/>https://security.netapp.com/advisory/ntap-20190919-0004/
+
+<h4>CVE:</h4> CVE-2018-16487 - <b>CVSS</b>: null
+</td></tr>
+<tr><td>pkg:npm/lodash@%5E4.17.21 version &lt;4.17.11 (unknown)</td><td>HV-GHSA-4xc9-xhrj-v574</td><td><h4>Overview</h4>
+
+Prototype Pollution in lodash<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-4xc9-xhrj-v574
+
+<h4>Recommendation</h4>
+
+Fix available in 4.17.11
+
+<h4>References</h4>
+
+https://hackerone.com/reports/380873<br/>https://security.netapp.com/advisory/ntap-20190919-0004/<br/>https://hackerone.com/reports/380873<br/>https://security.netapp.com/advisory/ntap-20190919-0004/
+
+<h4>CVE:</h4> CVE-2018-16487 - <b>CVSS</b>: null
+</td></tr>
+<tr><td>pkg:npm/markdown-it-katex@%5E2.0.3 version &gt;=0.0.0 (unknown)</td><td>HV-GHSA-5ff8-jcf9-fw62</td><td><h4>Overview</h4>
+
+Cross-Site Scripting in markdown-it-katex<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-5ff8-jcf9-fw62
+
+<h4>Recommendation</h4>
+
+Fix available in None Provided
+
+<h4>References</h4>
+
+None Provided
+
+<h4>CVE:</h4> None Provided - <b>CVSS</b>: null
+</td></tr>
+<tr><td>pkg:npm/markdown-it-katex@2.0.3 version &gt;=0.0.0 (unknown)</td><td>HV-GHSA-5ff8-jcf9-fw62</td><td><h4>Overview</h4>
+
+Cross-Site Scripting in markdown-it-katex<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-5ff8-jcf9-fw62
+
+<h4>Recommendation</h4>
+
+Fix available in None Provided
+
+<h4>References</h4>
+
+None Provided
+
+<h4>CVE:</h4> None Provided - <b>CVSS</b>: null
+</td></tr>
+<tr><td>pkg:npm/ws@%5E8.6.0 version &gt;=0.2.6,&lt;1.1.5 (unknown)</td><td>HV-GHSA-5v72-xg48-5rpm</td><td><h4>Overview</h4>
+
+Denial of Service in ws<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-5v72-xg48-5rpm
+
+<h4>Recommendation</h4>
+
+Fix available in 1.1.5
+
+<h4>References</h4>
+
+None Provided
+
+<h4>CVE:</h4> None Provided - <b>CVSS</b>: 7.5
+</td></tr>
+<tr><td>pkg:npm/ws@%5E8.6.0 version &lt;1.1.1 (unknown)</td><td>HV-GHSA-6663-c963-2gqg</td><td><h4>Overview</h4>
+
+DoS due to excessively large websocket message in ws<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-6663-c963-2gqg
+
+<h4>Recommendation</h4>
+
+Fix available in 1.1.1
+
+<h4>References</h4>
+
+https://github.com/nodejs/node/issues/7388<br/>https://nodesecurity.io/advisories/120<br/>https://github.com/nodejs/node/issues/7388<br/>https://nodesecurity.io/advisories/120
+
+<h4>CVE:</h4> CVE-2016-10542 - <b>CVSS</b>: null
+</td></tr>
+<tr><td>pkg:npm/canvas@%5E2.8.0 version &lt;1.6.11 (unknown)</td><td>HV-GHSA-73rg-x683-m3qw</td><td><h4>Overview</h4>
+
+Buffer overflow  in canvas<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-73rg-x683-m3qw
+
+<h4>Recommendation</h4>
+
+Fix available in 1.6.11
+
+<h4>References</h4>
+
+https://hackerone.com/reports/315037<br/>https://hackerone.com/reports/315037
+
+<h4>CVE:</h4> CVE-2020-8215 - <b>CVSS</b>: 8.8
+</td></tr>
+<tr><td>pkg:npm/trim-newlines@1.0.0 version &lt;3.0.1 (unknown)</td><td>HV-GHSA-7p7h-4mm5-852v</td><td><h4>Overview</h4>
+
+Uncontrolled Resource Consumption in trim-newlines<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-7p7h-4mm5-852v
+
+<h4>Recommendation</h4>
+
+Fix available in 3.0.1
+
+<h4>References</h4>
+
+https://github.com/sindresorhus/trim-newlines/releases/tag/v4.0.1<br/>https://lists.debian.org/debian-lts-announce/2022/12/msg00033.html<br/>https://security.netapp.com/advisory/ntap-20210702-0007/<br/>https://www.npmjs.com/package/trim-newlines<br/>https://github.com/sindresorhus/trim-newlines/releases/tag/v4.0.1<br/>https://lists.debian.org/debian-lts-announce/2022/12/msg00033.html<br/>https://security.netapp.com/advisory/ntap-20210702-0007/<br/>https://www.npmjs.com/package/trim-newlines
+
+<h4>CVE:</h4> CVE-2021-33623 - <b>CVSS</b>: 7.5
+</td></tr>
+<tr><td>pkg:npm/trim-newlines@2.0.0 version &lt;3.0.1 (unknown)</td><td>HV-GHSA-7p7h-4mm5-852v</td><td><h4>Overview</h4>
+
+Uncontrolled Resource Consumption in trim-newlines<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-7p7h-4mm5-852v
+
+<h4>Recommendation</h4>
+
+Fix available in 3.0.1
+
+<h4>References</h4>
+
+https://github.com/sindresorhus/trim-newlines/releases/tag/v4.0.1<br/>https://lists.debian.org/debian-lts-announce/2022/12/msg00033.html<br/>https://security.netapp.com/advisory/ntap-20210702-0007/<br/>https://www.npmjs.com/package/trim-newlines<br/>https://github.com/sindresorhus/trim-newlines/releases/tag/v4.0.1<br/>https://lists.debian.org/debian-lts-announce/2022/12/msg00033.html<br/>https://security.netapp.com/advisory/ntap-20210702-0007/<br/>https://www.npmjs.com/package/trim-newlines
+
+<h4>CVE:</h4> CVE-2021-33623 - <b>CVSS</b>: 7.5
+</td></tr>
+<tr><td>pkg:npm/ansi-regex@3.0.0 version &gt;=3.0.0,&lt;3.0.1 (unknown)</td><td>HV-GHSA-93q8-gq69-wqmw</td><td><h4>Overview</h4>
+
+Inefficient Regular Expression Complexity in chalk/ansi-regex<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-93q8-gq69-wqmw
+
+<h4>Recommendation</h4>
+
+Fix available in 3.0.1
+
+<h4>References</h4>
+
+https://github.com/chalk/ansi-regex/commit/8d1d7cdb586269882c4bdc1b7325d0c58c8f76f9<br/>https://huntr.dev/bounties/5b3cf33b-ede0-4398-9974-800876dfd994<br/>https://security.netapp.com/advisory/ntap-20221014-0002/<br/>https://www.oracle.com/security-alerts/cpuapr2022.html<br/>https://github.com/chalk/ansi-regex/commit/8d1d7cdb586269882c4bdc1b7325d0c58c8f76f9<br/>https://huntr.dev/bounties/5b3cf33b-ede0-4398-9974-800876dfd994<br/>https://security.netapp.com/advisory/ntap-20221014-0002/<br/>https://www.oracle.com/security-alerts/cpuapr2022.html
+
+<h4>CVE:</h4> CVE-2021-3807 - <b>CVSS</b>: 7.5
+</td></tr>
+<tr><td>pkg:npm/ansi-regex@4.1.0 version &gt;=4.0.0,&lt;4.1.1 (unknown)</td><td>HV-GHSA-93q8-gq69-wqmw</td><td><h4>Overview</h4>
+
+Inefficient Regular Expression Complexity in chalk/ansi-regex<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-93q8-gq69-wqmw
+
+<h4>Recommendation</h4>
+
+Fix available in 4.1.1
+
+<h4>References</h4>
+
+https://github.com/chalk/ansi-regex/commit/8d1d7cdb586269882c4bdc1b7325d0c58c8f76f9<br/>https://huntr.dev/bounties/5b3cf33b-ede0-4398-9974-800876dfd994<br/>https://security.netapp.com/advisory/ntap-20221014-0002/<br/>https://www.oracle.com/security-alerts/cpuapr2022.html<br/>https://github.com/chalk/ansi-regex/commit/8d1d7cdb586269882c4bdc1b7325d0c58c8f76f9<br/>https://huntr.dev/bounties/5b3cf33b-ede0-4398-9974-800876dfd994<br/>https://security.netapp.com/advisory/ntap-20221014-0002/<br/>https://www.oracle.com/security-alerts/cpuapr2022.html
+
+<h4>CVE:</h4> CVE-2021-3807 - <b>CVSS</b>: 7.5
+</td></tr>
+<tr><td>pkg:npm/rollup@%5E4.24.0 version &lt;2.79.2 (unknown)</td><td>HV-GHSA-gcx4-mw62-g8wm</td><td><h4>Overview</h4>
+
+DOM Clobbering Gadget found in rollup bundled scripts that leads to XSS<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-gcx4-mw62-g8wm
+
+<h4>Recommendation</h4>
+
+Fix available in 2.79.2
+
+<h4>References</h4>
+
+https://github.com/rollup/rollup/blob/b86ffd776cfa906573d36c3f019316d02445d9ef/src/ast/nodes/MetaProperty.ts#L157-L162<br/>https://github.com/rollup/rollup/blob/b86ffd776cfa906573d36c3f019316d02445d9ef/src/ast/nodes/MetaProperty.ts#L180-L185<br/>https://github.com/rollup/rollup/commit/2ef77c00ec2635d42697cff2c0567ccc8db34fb4<br/>https://github.com/rollup/rollup/commit/e2552c9e955e0a61f70f508200ee9f752f85a541<br/>https://github.com/rollup/rollup/security/advisories/GHSA-gcx4-mw62-g8wm
+
+<h4>CVE:</h4> CVE-2024-47068 - <b>CVSS</b>: 6.4
+</td></tr>
+<tr><td>pkg:npm/prismjs@%5E1.29.0 version &lt;1.24.0 (unknown)</td><td>HV-GHSA-gj77-59wh-66hg</td><td><h4>Overview</h4>
+
+Regular Expression Denial of Service (ReDoS) in Prism<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-gj77-59wh-66hg
+
+<h4>Recommendation</h4>
+
+Fix available in 1.24.0
+
+<h4>References</h4>
+
+https://github.com/PrismJS/prism/pull/2688<br/>https://github.com/PrismJS/prism/pull/2774<br/>https://github.com/PrismJS/prism/security/advisories/GHSA-gj77-59wh-66hg<br/>https://www.oracle.com/security-alerts/cpujan2022.html<br/>https://github.com/PrismJS/prism/pull/2688<br/>https://github.com/PrismJS/prism/pull/2774<br/>https://github.com/PrismJS/prism/security/advisories/GHSA-gj77-59wh-66hg<br/>https://www.oracle.com/security-alerts/cpujan2022.html
+
+<h4>CVE:</h4> CVE-2021-32723 - <b>CVSS</b>: 7.4
+</td></tr>
+<tr><td>pkg:npm/braces@2.3.2 version &lt;3.0.3 (unknown)</td><td>HV-GHSA-grv7-fg5c-xmjg</td><td><h4>Overview</h4>
+
+Uncontrolled resource consumption in braces<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-grv7-fg5c-xmjg
+
+<h4>Recommendation</h4>
+
+Fix available in 3.0.3
+
+<h4>References</h4>
+
+https://devhub.checkmarx.com/cve-details/CVE-2024-4068/<br/>https://github.com/micromatch/braces/commit/415d660c3002d1ab7e63dbf490c9851da80596ff<br/>https://github.com/micromatch/braces/issues/35<br/>https://github.com/micromatch/braces/pull/37<br/>https://github.com/micromatch/braces/pull/40<br/>https://devhub.checkmarx.com/cve-details/CVE-2024-4068/<br/>https://github.com/micromatch/braces/commit/415d660c3002d1ab7e63dbf490c9851da80596ff<br/>https://github.com/micromatch/braces/issues/35<br/>https://github.com/micromatch/braces/pull/37<br/>https://github.com/micromatch/braces/pull/40
+
+<h4>CVE:</h4> CVE-2024-4068 - <b>CVSS</b>: 7.5
+</td></tr>
+<tr><td>pkg:npm/braces@3.0.2 version &lt;3.0.3 (unknown)</td><td>HV-GHSA-grv7-fg5c-xmjg</td><td><h4>Overview</h4>
+
+Uncontrolled resource consumption in braces<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-grv7-fg5c-xmjg
+
+<h4>Recommendation</h4>
+
+Fix available in 3.0.3
+
+<h4>References</h4>
+
+https://devhub.checkmarx.com/cve-details/CVE-2024-4068/<br/>https://github.com/micromatch/braces/commit/415d660c3002d1ab7e63dbf490c9851da80596ff<br/>https://github.com/micromatch/braces/issues/35<br/>https://github.com/micromatch/braces/pull/37<br/>https://github.com/micromatch/braces/pull/40<br/>https://devhub.checkmarx.com/cve-details/CVE-2024-4068/<br/>https://github.com/micromatch/braces/commit/415d660c3002d1ab7e63dbf490c9851da80596ff<br/>https://github.com/micromatch/braces/issues/35<br/>https://github.com/micromatch/braces/pull/37<br/>https://github.com/micromatch/braces/pull/40
+
+<h4>CVE:</h4> CVE-2024-4068 - <b>CVSS</b>: 7.5
+</td></tr>
+<tr><td>pkg:npm/prismjs@%5E1.29.0 version &lt;1.23.0 (unknown)</td><td>HV-GHSA-h4hr-7fg3-h35w</td><td><h4>Overview</h4>
+
+Denial of service in prismjs<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-h4hr-7fg3-h35w
+
+<h4>Recommendation</h4>
+
+Fix available in 1.23.0
+
+<h4>References</h4>
+
+https://github.com/PrismJS/prism/commit/c2f6a64426f44497a675cb32dccb079b3eff1609<br/>https://github.com/PrismJS/prism/issues/2583<br/>https://github.com/PrismJS/prism/pull/2584<br/>https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARS-1076583<br/>https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-1076582<br/>https://snyk.io/vuln/SNYK-JS-PRISMJS-1076581<br/>https://github.com/PrismJS/prism/commit/c2f6a64426f44497a675cb32dccb079b3eff1609<br/>https://github.com/PrismJS/prism/issues/2583<br/>https://github.com/PrismJS/prism/pull/2584<br/>https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARS-1076583<br/>https://snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-1076582<br/>https://snyk.io/vuln/SNYK-JS-PRISMJS-1076581
+
+<h4>CVE:</h4> CVE-2021-23341 - <b>CVSS</b>: null
+</td></tr>
+<tr><td>pkg:npm/markdown-it@%5E13.0.1 version &lt;3.0.0 (unknown)</td><td>HV-GHSA-j5p7-jf4q-742q</td><td><h4>Overview</h4>
+
+markdown-it vulnerable to Inefficient Regular Expression Complexity<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-j5p7-jf4q-742q
+
+<h4>Recommendation</h4>
+
+Fix available in 3.0.0
+
+<h4>References</h4>
+
+https://github.com/markdown-it/markdown-it/commit/89c8620157d6e38f9872811620d25138fc9d1b0d<br/>https://github.com/markdown-it/markdown-it/releases/tag/3.0.0<br/>https://vuldb.com/?ctiid.216852<br/>https://vuldb.com/?id.216852<br/>https://github.com/markdown-it/markdown-it/commit/89c8620157d6e38f9872811620d25138fc9d1b0d<br/>https://github.com/markdown-it/markdown-it/releases/tag/3.0.0<br/>https://vuldb.com/?ctiid.216852<br/>https://vuldb.com/?id.216852
+
+<h4>CVE:</h4> CVE-2015-10005 - <b>CVSS</b>: 7.5
+</td></tr>
+<tr><td>pkg:npm/markdown-it@%5E14.1.0 version &lt;3.0.0 (unknown)</td><td>HV-GHSA-j5p7-jf4q-742q</td><td><h4>Overview</h4>
+
+markdown-it vulnerable to Inefficient Regular Expression Complexity<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-j5p7-jf4q-742q
+
+<h4>Recommendation</h4>
+
+Fix available in 3.0.0
+
+<h4>References</h4>
+
+https://github.com/markdown-it/markdown-it/commit/89c8620157d6e38f9872811620d25138fc9d1b0d<br/>https://github.com/markdown-it/markdown-it/releases/tag/3.0.0<br/>https://vuldb.com/?ctiid.216852<br/>https://vuldb.com/?id.216852<br/>https://github.com/markdown-it/markdown-it/commit/89c8620157d6e38f9872811620d25138fc9d1b0d<br/>https://github.com/markdown-it/markdown-it/releases/tag/3.0.0<br/>https://vuldb.com/?ctiid.216852<br/>https://vuldb.com/?id.216852
+
+<h4>CVE:</h4> CVE-2015-10005 - <b>CVSS</b>: 7.5
+</td></tr>
+<tr><td>pkg:npm/vite@%5E4 version &lt;2.9.13 (unknown)</td><td>HV-GHSA-mv48-hcvh-8jj8</td><td><h4>Overview</h4>
+
+Vite before v2.9.13 vulnerable to directory traversal via crafted URL to victim&apos;s service<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-mv48-hcvh-8jj8
+
+<h4>Recommendation</h4>
+
+Fix available in 2.9.13
+
+<h4>References</h4>
+
+https://github.com/vitejs/vite/issues/8498<br/>https://github.com/vitejs/vite/releases/tag/v2.9.13<br/>https://github.com/vitejs/vite/releases/tag/v3.0.0-beta.4<br/>https://github.com/vitejs/vite/issues/8498<br/>https://github.com/vitejs/vite/releases/tag/v2.9.13<br/>https://github.com/vitejs/vite/releases/tag/v3.0.0-beta.4
+
+<h4>CVE:</h4> CVE-2022-35204 - <b>CVSS</b>: 8.6
+</td></tr>
+<tr><td>pkg:npm/vite@%5E4.0.4 version &lt;2.9.13 (unknown)</td><td>HV-GHSA-mv48-hcvh-8jj8</td><td><h4>Overview</h4>
+
+Vite before v2.9.13 vulnerable to directory traversal via crafted URL to victim&apos;s service<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-mv48-hcvh-8jj8
+
+<h4>Recommendation</h4>
+
+Fix available in 2.9.13
+
+<h4>References</h4>
+
+https://github.com/vitejs/vite/issues/8498<br/>https://github.com/vitejs/vite/releases/tag/v2.9.13<br/>https://github.com/vitejs/vite/releases/tag/v3.0.0-beta.4<br/>https://github.com/vitejs/vite/issues/8498<br/>https://github.com/vitejs/vite/releases/tag/v2.9.13<br/>https://github.com/vitejs/vite/releases/tag/v3.0.0-beta.4
+
+<h4>CVE:</h4> CVE-2022-35204 - <b>CVSS</b>: 8.6
+</td></tr>
+<tr><td>pkg:npm/vite@%5E5.2.1 version &lt;2.9.13 (unknown)</td><td>HV-GHSA-mv48-hcvh-8jj8</td><td><h4>Overview</h4>
+
+Vite before v2.9.13 vulnerable to directory traversal via crafted URL to victim&apos;s service<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-mv48-hcvh-8jj8
+
+<h4>Recommendation</h4>
+
+Fix available in 2.9.13
+
+<h4>References</h4>
+
+https://github.com/vitejs/vite/issues/8498<br/>https://github.com/vitejs/vite/releases/tag/v2.9.13<br/>https://github.com/vitejs/vite/releases/tag/v3.0.0-beta.4<br/>https://github.com/vitejs/vite/issues/8498<br/>https://github.com/vitejs/vite/releases/tag/v2.9.13<br/>https://github.com/vitejs/vite/releases/tag/v3.0.0-beta.4
+
+<h4>CVE:</h4> CVE-2022-35204 - <b>CVSS</b>: 8.6
+</td></tr>
+<tr><td>pkg:npm/lodash.set@4.3.2 version &gt;=3.7.0,&lt;=4.3.2 (unknown)</td><td>HV-GHSA-p6mc-m468-83gw</td><td><h4>Overview</h4>
+
+Prototype Pollution in lodash<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-p6mc-m468-83gw
+
+<h4>Recommendation</h4>
+
+Fix available in None Provided
+
+<h4>References</h4>
+
+https://github.com/lodash/lodash/issues/4874<br/>https://hackerone.com/reports/712065<br/>https://security.netapp.com/advisory/ntap-20200724-0006/<br/>https://www.oracle.com//security-alerts/cpujul2021.html<br/>https://www.oracle.com/security-alerts/cpuApr2021.html<br/>https://www.oracle.com/security-alerts/cpuapr2022.html<br/>https://www.oracle.com/security-alerts/cpujan2022.html<br/>https://www.oracle.com/security-alerts/cpuoct2021.html<br/>https://github.com/lodash/lodash/issues/4874<br/>https://hackerone.com/reports/712065<br/>https://security.netapp.com/advisory/ntap-20200724-0006/<br/>https://www.oracle.com//security-alerts/cpujul2021.html<br/>https://www.oracle.com/security-alerts/cpuApr2021.html<br/>https://www.oracle.com/security-alerts/cpuapr2022.html<br/>https://www.oracle.com/security-alerts/cpujan2022.html<br/>https://www.oracle.com/security-alerts/cpuoct2021.html
+
+<h4>CVE:</h4> CVE-2020-8203 - <b>CVSS</b>: 7.4
+</td></tr>
+<tr><td>pkg:npm/node-fetch@%5E3.3.1 version &lt;2.6.7 (unknown)</td><td>HV-GHSA-r683-j2x4-v87g</td><td><h4>Overview</h4>
+
+node-fetch forwards secure headers to untrusted sites<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-r683-j2x4-v87g
+
+<h4>Recommendation</h4>
+
+Fix available in 2.6.7
+
+<h4>References</h4>
+
+https://cert-portal.siemens.com/productcert/pdf/ssa-637483.pdf<br/>https://github.com/node-fetch/node-fetch/commit/36e47e8a6406185921e4985dcbeff140d73eaa10<br/>https://huntr.dev/bounties/d26ab655-38d6-48b3-be15-f9ad6b6ae6f7<br/>https://lists.debian.org/debian-lts-announce/2022/12/msg00007.html<br/>https://cert-portal.siemens.com/productcert/pdf/ssa-637483.pdf<br/>https://github.com/node-fetch/node-fetch/commit/36e47e8a6406185921e4985dcbeff140d73eaa10<br/>https://huntr.dev/bounties/d26ab655-38d6-48b3-be15-f9ad6b6ae6f7<br/>https://lists.debian.org/debian-lts-announce/2022/12/msg00007.html
+
+<h4>CVE:</h4> CVE-2022-0235 - <b>CVSS</b>: 8.8
+</td></tr>
+<tr><td>pkg:npm/http-cache-semantics@3.8.1 version &lt;4.1.1 (unknown)</td><td>HV-GHSA-rc47-6667-2j5j</td><td><h4>Overview</h4>
+
+http-cache-semantics vulnerable to Regular Expression Denial of Service<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-rc47-6667-2j5j
+
+<h4>Recommendation</h4>
+
+Fix available in 4.1.1
+
+<h4>References</h4>
+
+https://github.com/kornelski/http-cache-semantics/blob/master/index.js%23L83<br/>https://security.netapp.com/advisory/ntap-20230622-0008/<br/>https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-3253332<br/>https://security.snyk.io/vuln/SNYK-JS-HTTPCACHESEMANTICS-3248783<br/>https://github.com/kornelski/http-cache-semantics/blob/master/index.js%23L83<br/>https://security.netapp.com/advisory/ntap-20230622-0008/<br/>https://security.snyk.io/vuln/SNYK-JAVA-ORGWEBJARSNPM-3253332<br/>https://security.snyk.io/vuln/SNYK-JS-HTTPCACHESEMANTICS-3248783
+
+<h4>CVE:</h4> CVE-2022-25881 - <b>CVSS</b>: 7.5
+</td></tr>
+<tr><td>pkg:npm/path-to-regexp@0.1.10 version &lt;0.1.12 (unknown)</td><td>HV-GHSA-rhx6-c78j-4q9w</td><td><h4>Overview</h4>
+
+path-to-regexp contains a ReDoS<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-rhx6-c78j-4q9w
+
+<h4>Recommendation</h4>
+
+Fix available in 0.1.12
+
+<h4>References</h4>
+
+https://github.com/pillarjs/path-to-regexp/commit/f01c26a013b1889f0c217c643964513acf17f6a4<br/>https://github.com/pillarjs/path-to-regexp/security/advisories/GHSA-rhx6-c78j-4q9w<br/>https://security.netapp.com/advisory/ntap-20250124-0002/
+
+<h4>CVE:</h4> CVE-2024-52798 - <b>CVSS</b>: 7.5
+</td></tr>
+<tr><td>pkg:npm/decode-uri-component@0.2.0 version &lt;0.2.1 (unknown)</td><td>HV-GHSA-w573-4hg7-7wgq</td><td><h4>Overview</h4>
+
+decode-uri-component vulnerable to Denial of Service (DoS)<br/><b>Grype Data Source</b>: https://github.com/advisories/GHSA-w573-4hg7-7wgq
+
+<h4>Recommendation</h4>
+
+Fix available in 0.2.1
+
+<h4>References</h4>
+
+https://github.com/SamVerschueren/decode-uri-component/issues/5<br/>https://github.com/sindresorhus/query-string/issues/345<br/>https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ERN6YE3DS7NBW7UH44SCJBMNC2NWQ7SM/<br/>https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/KAC5KQ2SEWAMQ6UZAUBZ5KXKEOESH375/<br/>https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/QABOUA2I542UTANVZIVFKWMRYVHLV32D/<br/>https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/UW4SCMT3SEUFVIL7YIADQ5K36GJEO6I5/<br/>https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/VNV2GNZXOTEDAJRFH3ZYWRUBGIVL7BSU/<br/>https://github.com/SamVerschueren/decode-uri-component/issues/5<br/>https://github.com/sindresorhus/query-string/issues/345<br/>https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/ERN6YE3DS7NBW7UH44SCJBMNC2NWQ7SM/<br/>https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/KAC5KQ2SEWAMQ6UZAUBZ5KXKEOESH375/<br/>https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/QABOUA2I542UTANVZIVFKWMRYVHLV32D/<br/>https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/UW4SCMT3SEUFVIL7YIADQ5K36GJEO6I5/<br/>https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/VNV2GNZXOTEDAJRFH3ZYWRUBGIVL7BSU/
+
+<h4>CVE:</h4> CVE-2022-38900 - <b>CVSS</b>: 7.5
+</td></tr>
+</table>
+<h2 id="mals">Critical and High maliciousCodeRisk</h2><table><tr><th>Package</th><th>Impact</th><th>Description</th></tr>
+</table>
+<h2 id="engs">Critical and High engineeringRisk</h2><table><tr><th>Package</th><th>Impact</th><th>Description</th></tr>
+</table>
+<h2 id="auts">Critical and High authorsRisk</h2><table><tr><th>Package</th><th>Impact</th><th>Description</th></tr>
+</table>
+<h2 id="lics">Critical, High, Medium, and Low licenseRisk</h2><table><tr><th>Package</th><th>Impact</th><th>Description</th></tr>
+</table>
+</div></body></html>
